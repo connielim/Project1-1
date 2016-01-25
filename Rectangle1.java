@@ -55,25 +55,18 @@ public class Rectangle1 {
 		String line = null;
 		ReadInfo dataCollector = new ReadInfo();
 		
+		
 		try {
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			
 			int lineNumber = 0;
-			while(( line = bufferedReader.readLine()) != null ){
-				//Trim beginning and ending whitespace
-				//Check if a line in the text file is ONLY whitespace
-				if(!line.isEmpty() && !line.trim().equals("")) {
-					lineNumber++;
+			
+			while( (line = bufferedReader.readLine()) != null) {
+				String temp = line.trim();
+				if(!temp.isEmpty() || !temp.equals("")) {
+					dataCollector.analyzeStr(temp);
 				}
-				
-			}
-			
-			lineNumber = 0;	//reset lineNumber
-			
-			
-			
-			for(String s : dataCollector.lines) {
-				System.out.println(s);
 			}
 			
 			bufferedReader.close();

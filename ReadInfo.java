@@ -1,24 +1,51 @@
 
 public class ReadInfo {
-	public static String[] lines;
-	private int nextIndex = 0;
+	final String INSERT = "insert";
+	final String REMOVE = "remove";
+	final String REGIONSEARCH = "regionsearch";
+	final String INTERSECTIONS = "intersections";
+	final String SEARCH = "search";
+	final String DUMP = "dump";
 	
-	//Push onto the 'lines' array using a set index
-	public void push(String s) {
-		lines[nextIndex] = s;
-		nextIndex++;
+	public void analyzeStr(String str) {
+		String[] splitStr = str.split("\\s+"); //Split the input string
+		String command = splitStr[0];
+		if(command.equals(INSERT)) {
+			System.out.print("helo");
+		} else if(command.equals(REMOVE)) {
+			
+		} else if(command.equals(REGIONSEARCH)) {
+			
+		} else if(command.equals(INTERSECTIONS)) {
+			
+		} else if (command.equals(SEARCH)) {
+			
+		} else if (command.equals(DUMP)) {
+			
+		}
 	}
 	
-	//Push onto the 'lines' array using a given index
-	public void push(String s, int lineNumber) {
-		lines[lineNumber] = s;
+	private void insert() {
+		
 	}
 	
-	private void resetNextIndex() {
-		nextIndex = 0;
+	private void remove() {
+		
 	}
 	
-	public void setLinesSize(int x) {
-		lines = new String[x];
+	private void regionsearch() {
+		
+	}
+	
+	private void intersections() {
+		
+	}
+	
+	private void search() {
+		
+	}
+	
+	private void dump() {
+		
 	}
 }
