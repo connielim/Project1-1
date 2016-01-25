@@ -60,8 +60,6 @@ public class Rectangle1 {
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			
-			int lineNumber = 0;
-			
 			while( (line = bufferedReader.readLine()) != null) {
 				String temp = line.trim();
 				if(!temp.isEmpty() || !temp.equals("")) {
