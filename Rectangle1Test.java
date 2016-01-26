@@ -40,5 +40,6 @@ public class Rectangle1Test extends TestCase {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 }

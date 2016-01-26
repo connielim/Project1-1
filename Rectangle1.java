@@ -43,6 +43,8 @@ public class Rectangle1 {
 	 * 		in as a command line argument.
 	 */
 	public static void main(String[] args) {
+		//Check if there are 0 or more than 1 arguments in the command line
+		//The project specifications only want 1 argument
 		if(args.length == 0) {
 			System.out.println("No input file was detected.");
 			System.exit(0);
@@ -50,23 +52,29 @@ public class Rectangle1 {
 			System.out.println("Too many command line arguments detected.");
 			System.exit(0);
 		}
-		
+		//The file is the first argument
 		String file = args[0];
 		String line = null;
+		//Our created class
 		ReadInfo dataCollector = new ReadInfo();
 		
 		
 		try {
+			//Use filereader nad bufferedreader to read from the text file
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			
+			//Keep reading each line in the bufferedreader until it ends
 			while( (line = bufferedReader.readLine()) != null) {
+				//Declare a temporary string that is a line of the bufferedreader
+				//Trim the line as well to remove whitespace from the left and right side of the line
 				String temp = line.trim();
+				//Make sure the string contains actual values
 				if(!temp.isEmpty() || !temp.equals("")) {
 					dataCollector.analyzeStr(temp);
 				}
 			}
-			
+			//Close the bufferedreader
 			bufferedReader.close();
 		} catch (IOException ex) {
 			System.out.println("Error, could not read " + file);

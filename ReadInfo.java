@@ -7,11 +7,13 @@ public class ReadInfo {
 	final String SEARCH = "search";
 	final String DUMP = "dump";
 	
+	//Read the input string to determine what to do with the string
 	public void analyzeStr(String str) {
-		String[] splitStr = str.split("\\s+"); //Split the input string
-		String command = splitStr[0];
+		//Split the input string into an array to read later
+		String[] splitStr = str.split("\\s+"); 
+		String command = splitStr[0]; //the command is always the first element in the array
 		if(command.equals(INSERT)) {
-			System.out.print("helo");
+			
 		} else if(command.equals(REMOVE)) {
 			
 		} else if(command.equals(REGIONSEARCH)) {
@@ -22,6 +24,8 @@ public class ReadInfo {
 			
 		} else if (command.equals(DUMP)) {
 			
+		} else {
+			System.out.println("Bad command read.");
 		}
 	}
 	
