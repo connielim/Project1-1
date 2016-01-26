@@ -13,17 +13,18 @@ public class ReadInfo {
 		String[] splitStr = str.split("\\s+"); 
 		String command = splitStr[0]; //the command is always the first element in the array
 		if(command.equals(INSERT)) {
-			
+			//Possible command: insert name x y w h
 		} else if(command.equals(REMOVE)) {
-			
+			//Possible command: remove name
+			//Possible command: remove x y w h
 		} else if(command.equals(REGIONSEARCH)) {
-			
+			//Possible command: regionsearch
 		} else if(command.equals(INTERSECTIONS)) {
-			
+			//Possible command: intersections
 		} else if (command.equals(SEARCH)) {
-			
+			//Possible command: search name
 		} else if (command.equals(DUMP)) {
-			
+			//Possible command: dump
 		} else {
 			System.out.println("Bad command read.");
 		}
